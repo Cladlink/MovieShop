@@ -1,0 +1,16 @@
+/movieShop/app/config/parameters.yml
+
+movieShop/var/cache
+
+
+Supprimerait .idea/
+Supprimerait composer.phar
+Supprimerait movieShop/app/config/parameters.yml
+Supprimerait movieShop/var/bootstrap.php.cache
+Supprimerait movieShop/var/cache/dev/
+Supprimerait movieShop/var/cache/prod/
+Supprimerait movieShop/var/logs/dev.log
+Supprimerait movieShop/var/sessions/dev/
+Supprimerait movieShop/var/sessions/prod/
+Supprimerait movieShop/vendor/
+Supprimerait movieShop/web/bundles/
