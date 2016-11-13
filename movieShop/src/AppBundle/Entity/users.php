@@ -66,7 +66,8 @@ class users
     private $uniqueKeyUser;
 
     /**
-     * @ORM\Column(type="integer")
+     * @OneToOne(targetEntity="droits")
+     * @JoinColumn(name="droit_id", referencedColumnName="id")
      */
     private $droit_id;
 }

@@ -40,12 +40,14 @@ class carts
     private $dateCart;
 
     /**
-     * @ORM\Column(type="integer")
+     * @OneToOne(targetEntity="users")
+     * @JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user_id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ManyToMany(targetEntity="movies")
+     * @JoinColumn(name="produit_id", referencedColumnName="id")
      */
     private $produit_id;
 

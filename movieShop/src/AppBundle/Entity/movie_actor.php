@@ -14,12 +14,14 @@ use Doctrine\ORM\Mapping as ORM;
 class movie_actor
 {
     /**
-     * @ORM\Column(type="integer")
+     * @OneToOne(targetEntity="typeMovie")
+     * @JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $movie_id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @OneToOne(targetEntity="actors")
+     * @JoinColumn(name="actor_movie_id", referencedColumnName="id")
      */
-    private $film_id;
+    private $actor_id;
 }

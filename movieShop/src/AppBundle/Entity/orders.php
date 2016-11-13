@@ -25,12 +25,14 @@ class orders
     private $date_order;
 
     /**
-     * @ORM\Column(type="integer")
+     * @OneToOne(targetEntity="users")
+     * @JoinColumn(name="user_order_id", referencedColumnName="id")
      */
     private $user_id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ManyToOne(targetEntity="stateOrder")
+     * @JoinColumn(name="etat_id", referencedColumnName="id")
      */
     private $etat_id;
 }

@@ -47,27 +47,26 @@ class movies
     private $quantityMovie;
 
     /**
-     * @ORM\Column(type="string")
+     * @OneToOne(targetEntity="typeMovie")
+     * @JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type_id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ManyToMany(targetEntity="actors")
+     * @JoinColumn(name="actors_id", referencedColumnName="id")
      */
     private $actors_id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ManyToMany(targetEntity="composers")
+     * @JoinColumn(name="composer_id", referencedColumnName="id")
      */
     private $composer_id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ManyToOne(targetEntity="directors")
+     * @JoinColumn(name="director_id", referencedColumnName="id")
      */
     private $director_id;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $format_id;
 }
