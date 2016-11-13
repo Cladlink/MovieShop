@@ -11,8 +11,13 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToOne;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="users")
+ */
 class users
 {
     /**
@@ -58,8 +63,7 @@ class users
     private $adresse;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
+     * @ORM\Column(type="boolean")     */
     private $activeUser;
 
     /**
@@ -68,7 +72,7 @@ class users
     private $uniqueKeyUser;
 
     /**
-     * @OneToOne(targetEntity="droits")
+     * @ManyToOne(targetEntity="droits")
      * @JoinColumn(name="droit_id", referencedColumnName="id")
      */
     private $droit_id;

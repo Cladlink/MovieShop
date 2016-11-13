@@ -8,6 +8,10 @@ use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToOne;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="orders")
+ */
 class orders
 {
     /**
@@ -28,7 +32,7 @@ class orders
     private $date_order;
 
     /**
-     * @OneToOne(targetEntity="users")
+     * @ManyToOne(targetEntity="users")
      * @JoinColumn(name="user_order_id", referencedColumnName="id")
      */
     private $user_id;

@@ -32,12 +32,12 @@ class movies
     private $durationMovie;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="date")
      */
     private $dateMovie;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="float")
      */
     private $priceMovie;
 
@@ -52,7 +52,7 @@ class movies
     private $quantityMovie;
 
     /**
-     * @OneToOne(targetEntity="typeMovie")
+     * @ManyToOne(targetEntity="typeMovie")
      * @JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type_id;
@@ -61,10 +61,10 @@ class movies
      * @ManyToMany(targetEntity="actors")
      * @JoinColumn(name="actors_id", referencedColumnName="id")
      */
-    private $actors_id;
+    private $actor_id;
 
     /**
-     * @ManyToMany(targetEntity="composers")
+     * @ManyToOne(targetEntity="composers")
      * @JoinColumn(name="composer_id", referencedColumnName="id")
      */
     private $composer_id;

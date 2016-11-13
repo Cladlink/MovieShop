@@ -3,7 +3,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
- * @ORM\Table(name="movies")
+ * @ORM\Table(name="typeMovie")
  */
 class typeMovie
 {

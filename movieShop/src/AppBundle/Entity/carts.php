@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: cladlink
- * Date: 12/11/16
- * Time: 07:31
- */
 
 namespace AppBundle\Entity;
 
@@ -12,8 +6,13 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\ManyToMany;
+use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToOne;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="carts")
+ */
 class carts
 {
 
@@ -47,10 +46,10 @@ class carts
     private $user_id;
 
     /**
-     * @ManyToMany(targetEntity="movies")
-     * @JoinColumn(name="produit_id", referencedColumnName="id")
+     * @ManyToOne(targetEntity="movies")
+     * @JoinColumn(name="movie_id", referencedColumnName="id")
      */
-    private $produit_id;
+    private $movie_id;
 
     /**
      * @OneToOne(targetEntity="orders")

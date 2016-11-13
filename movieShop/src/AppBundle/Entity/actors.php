@@ -1,14 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: cladlink
- * Date: 12/11/16
- * Time: 07:09
- */
 
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="actors")
+ */
 class actors
 {
     /**
