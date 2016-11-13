@@ -7,7 +7,7 @@
     class LuckyController extends Controller
     {
         /**
-        * @Route("/lucky/number")
+        * @Route("/")
         */
         public function numberAction()
         {
